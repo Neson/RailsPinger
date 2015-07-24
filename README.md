@@ -12,6 +12,10 @@ It takes each `PING_URL_n` environment variable (`n` can be 1 up to 100) as URLs
 
 You can set a key (environment variable `PINGER_KEY`) to only proceed requests with the valid key (`/?key=xxxxxxx`), and redirect request to an optional URL (environment variable `REDIRECT_URL`) for other requests.
 
+### New Relic Monitoring
+
+Environment variables: `NEW_RELIC_LICENSE_KEY` and `NEWRELIC_APP_NAME` can be set to use New Relic Monitoring.
+
 ## Tips
 
 If you need to ping each virtual site on the local machine, you can setup an wild-card domain that points to 127.0.0.1 (e.g. `*.self.example.com → 127.0.0.1`), then add different sub-domains for each virtual site (`site-1.self.example.com`, `site-2.self.example.com`, `site-3.self.example.com`), finally you can set the pinger to ping those domains. As a result, you can make this pinger an endpoint of availability check for all sites running on this machine (node).
